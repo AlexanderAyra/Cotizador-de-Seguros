@@ -24,3 +24,7 @@ export const calcularMarca = (marca) => {
 
 	return incremento
 }
+
+export const getPlan = (plan) => {
+	return plan === 'basico' ? 1.2 : 1.5
+}

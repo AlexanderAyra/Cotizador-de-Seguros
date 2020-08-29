@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
-import { getDiferenciaYear, calcularMarca } from '../helper'
+import { getDiferenciaYear, calcularMarca, getPlan } from '../helper'
 
 const Campo = styled.div`
 	display: flex;
@@ -87,6 +87,9 @@ const Formulario = () => {
 		resultado -= (multi * resultado) / 100
 
 		resultado = calcularMarca(marca) * resultado
+
+		const incrementoPlan = getPlan(plan)
+		resultado = parseFloat(incrementoPlan * resultado).toFixed(2)
 
 		console.log(resultado)
 	}
