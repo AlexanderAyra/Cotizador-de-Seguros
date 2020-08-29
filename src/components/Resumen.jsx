@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import propTypes from 'prop-types'
 import { primerMayuscula } from '../helper'
 
 const ContenedorResumen = styled.div`
@@ -25,6 +26,10 @@ const Resumen = ({ datos }) => {
 			</ul>
 		</ContenedorResumen>
 	)
+}
+
+Resumen.propTypes = {
+	datos: propTypes.object.isRequired,
 }
 
 export default Resumen
