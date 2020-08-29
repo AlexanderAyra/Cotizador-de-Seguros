@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Header from './components/Header'
 import Formulario from './components/Formulario'
 import Resumen from './components/Resumen'
+import Resultado from './components/Resultado'
 
 import styled from '@emotion/styled'
 
@@ -25,7 +26,7 @@ function App() {
 		},
 	})
 
-	const { datos } = resumen
+	const { cotizacion, datos } = resumen
 
 	return (
 		<Contenedor className='App'>
@@ -33,6 +34,7 @@ function App() {
 			<ContenedorFormulario>
 				<Formulario setResumen={setResumen} />
 				<Resumen datos={datos} />
+				<Resultado cotizacion={cotizacion} />
 			</ContenedorFormulario>
 		</Contenedor>
 	)
