@@ -1,9 +1,10 @@
 import React from 'react'
 import Header from './components/Header'
+import Formulario from './components/Formulario'
 import styled from '@emotion/styled'
 
 const Contenedor = styled.div`
-	min-width: 600px;
+	max-width: 600px;
 	margin: 0 auto;
 `
 
@@ -16,7 +17,9 @@ function App() {
 	return (
 		<Contenedor className='App'>
 			<Header titulo='Cotizador de Seguros' />
-			<ContenedorFormulario></ContenedorFormulario>
+			<ContenedorFormulario>
+				<Formulario />
+			</ContenedorFormulario>
 		</Contenedor>
 	)
 }
