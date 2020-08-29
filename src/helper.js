@@ -28,3 +28,7 @@ export const calcularMarca = (marca) => {
 export const getPlan = (plan) => {
 	return plan === 'basico' ? 1.2 : 1.5
 }
+
+export const primerMayuscula = (texto) => {
+	return texto.charAt(0).toUpperCase() + texto.slice(1)
+}
