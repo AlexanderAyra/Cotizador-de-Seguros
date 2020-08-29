@@ -51,7 +51,7 @@ const Error = styled.div`
 	margin-bottom: 2rem;
 `
 
-const Formulario = () => {
+const Formulario = ({ setResumen }) => {
 	const [datos, setDatos] = useState({
 		marca: '',
 		year: '',
@@ -92,6 +92,11 @@ const Formulario = () => {
 		resultado = parseFloat(incrementoPlan * resultado).toFixed(2)
 
 		console.log(resultado)
+
+		setResumen({
+			cotizacion: resultado,
+			datos,
+		})
 	}
 
 	return (
@@ -112,6 +117,7 @@ const Formulario = () => {
 				<Label>Año</Label>
 				<Select name='year' value={year} onChange={setInformacion}>
 					<option value=''>-- Seleccione --</option>
+					<option value='2022'>2022</option>
 					<option value='2021'>2021</option>
 					<option value='2020'>2020</option>
 					<option value='2019'>2019</option>
